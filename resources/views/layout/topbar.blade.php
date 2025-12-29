@@ -9,7 +9,7 @@
                                 fill="white" />
                         </svg>
 
-                        <a href="#0" class="ms-1">info@example.com</a>
+                        <a href="mailto:{{ setting('company_email') }}" class="ms-1">{{ setting('company_email') }}</a>
                     </li>
                     <li class="ms-4"><svg width="16" height="15" viewBox="0 0 16 15" fill="none"
                             xmlns="http://www.w3.org/2000/svg">
@@ -28,14 +28,14 @@
                             </defs>
                         </svg>
 
-                        <a href="#0" class="ms-1">+208-6666-0112</a>
+                        <a href="tel:{{ setting('company_phone_number') }}" class="ms-1">{{ setting('company_phone_number') }}</a>
                     </li>
                 </ul>
                 <ul class="link-info">
                     <li><a href="#0"><i class="fa-brands fa-facebook-f"></i></a></li>
                     <li><a href="#0"><i class="fa-brands fa-twitter"></i></a></li>
                     <li><a href="#0"><i class="fa-brands fa-linkedin-in"></i></a></li>
-                    <li><a href="#0"><i class="fa-brands fa-pinterest-p"></i></a></li>
+                    {{-- <li><a href="#0"><i class="fa-brands fa-pinterest-p"></i></a></li> --}}
                 </ul>
             </div>
         </div>

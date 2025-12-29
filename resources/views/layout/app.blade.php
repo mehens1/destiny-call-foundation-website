@@ -45,6 +45,23 @@
     @include('layout.sidebar')
 
     <main>
+
+        @if (!Request::is('/')) 
+        <section class="banner__inner-page bg-image pt-160 pb-160"
+            data-background="{{ asset('assets/images/banner/banner-inner-page.jpg') }}">
+            <div class="container">
+                <h2 class="wow fadeInUp" data-wow-delay="00ms" data-wow-duration="1500ms">
+                    @yield('title', 'Page Title')
+                </h2>
+                <div class="breadcrumb-list wow fadeInUp" data-wow-delay="200ms" data-wow-duration="1500ms">
+                    <a href="{{ url('/') }}">Home</a>
+                    <span><i class="fa-regular fa-angles-right mx-2"></i> @yield('title', 'Page')</span>
+                </div>
+            </div>
+        </section>
+    @endif
+
+
         @yield('content')
     </main>
 
