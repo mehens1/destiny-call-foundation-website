@@ -11,7 +11,9 @@
                     <div class="col-xl-4 col-md-6 wow fadeInUp" data-wow-delay="200ms" data-wow-duration="1500ms">
                         <div class="blog__item">
                             <div class="image">
-                                <img src="assets/images/blog/blog-image2.jpg" alt="image">
+                                <img src="{{ $post->featured_image ? asset('storage/' . $post->featured_image) : asset('assets/images/blog/blog_placeholder.png') }}" alt="{{ $post->title }}">
+
+
                                 <span class="blog-tag">{{ $post->category->name }}</span>
                             </div>
                             <div class="blog__content pt-4">

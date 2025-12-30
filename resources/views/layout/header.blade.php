@@ -3,7 +3,7 @@
         <div class="container">
             <div class="header__main">
                 <a href="/" class="logo">
-                    <img src="assets/images/logo/logo.png" alt="logo">
+                    <img src="{{asset('assets/images/logo/logo.png')}}" alt="Destiny Call Foundation Logo">
                 </a>
                 <div class="main-menu">
                     <nav>

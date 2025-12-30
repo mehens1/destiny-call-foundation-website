@@ -1,16 +1,16 @@
 <div id="targetElement" class="sidebar-area sidebar__hide">
         <div class="sidebar__overlay"></div>
         <a href="/" class="logo mb-40">
-            <img src="assets/images/logo/logo-light.png" alt="logo">
+            <img src="{{asset('assets/images/logo/logo-light.png')}}" alt="Destiny Call Foundation Logo">
         </a>
         <div class="mobile-menu overflow-hidden"></div>
         <ul class="info pt-40">
-            <li><i class="fa-solid primary-color fa-location-dot"></i> <a href="#0">example@example.com</a>
+            <li><i class="fa-solid primary-color fa-location-dot"></i> <a href="#0">{{ setting('company_address') }}</a>
             </li>
             <li class="py-2"><i class="fa-solid primary-color fa-phone-volume"></i> <a
-                    href="tel:+208-6666-0112">+208-6666-0112</a>
+                    href="tel:{{ setting('company_phone_number') }}">{{ setting('company_phone_number') }}</a>
             </li>
-            <li><i class="fa-solid primary-color fa-paper-plane"></i> <a href="#0">info@example.com</a></li>
+            <li><i class="fa-solid primary-color fa-paper-plane"></i> <a href="#0">{{ setting('company_email') }}</a></li>
         </ul>
         <div class="social-icon mt-20">
             <a href="#0"><i class="fa-brands fa-facebook-f"></i></a>
