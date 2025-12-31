@@ -10,7 +10,7 @@
             <div class="container">
                 <div class="footer__wrp pt-120 pb-120">
                     <div class="row g-4 justify-content-between">
-                        <div class="col-lg-4 col-sm-6 wow fadeInUp" data-wow-delay="00ms" data-wow-duration="1500ms">
+                        <div class="col-lg-6 col-sm-12 wow fadeInUp" data-wow-delay="00ms" data-wow-duration="1500ms">
                             <div class="footer__item">
                                 <a href="index.html" class="logo mb-40">
                                     <img src="{{asset('assets/images/logo/logo-light.png')}}" alt="Logo">
@@ -18,7 +18,7 @@
                                 <p class="text-white">{{ setting('company_about') }}</p>
                             </div>
                         </div>
-                        <div class="col-lg-3 col-sm-6 wow fadeInUp" data-wow-delay="400ms" data-wow-duration="1500ms">
+                        {{-- <div class="col-lg-3 col-sm-6 wow fadeInUp" data-wow-delay="400ms" data-wow-duration="1500ms">
                             <div class="footer__item">
                                 <h3 class="title mb-40 text-white">Latest Post</h3>
                                 <ul class="post">
@@ -45,8 +45,8 @@
                                     </li>
                                 </ul>
                             </div>
-                        </div>
-                        <div class="col-lg-3 col-sm-6 wow fadeInUp" data-wow-delay="600ms" data-wow-duration="1500ms">
+                        </div> --}}
+                        <div class="col-lg-4 col-sm-12 wow fadeInUp" data-wow-delay="600ms" data-wow-duration="1500ms">
                             <div class="footer__item">
                                 <h3 class="title mb-40 text-white">Contact Info</h3>
                                 <ul class="link info">
@@ -62,9 +62,9 @@
                                     </li>
                                 </ul>
                                 <div class="social-icon mt-30">
-                                    <a href="#0"><i class="fa-brands fa-facebook-f"></i></a>
-                                    <a class="active" href="#0"><i class="fa-brands fa-instagram"></i></a>
-                                    <a href="#0"><i class="fa-brands fa-linkedin-in"></i></a>
+                                    <a href="{{ setting('company_facebook') ?? '#' }}"><i class="fa-brands fa-facebook-f"></i></a>
+                                    <a class="active" href="{{ setting('company_instagram') ?? '#' }}"><i class="fa-brands fa-instagram"></i></a>
+                                    <a href="{{ setting('company_twitter') ?? '#' }}"><i class="fa-brands fa-twitter"></i></a>
                                 </div>
                             </div>
                         </div>

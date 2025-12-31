@@ -32,10 +32,9 @@
                     </li>
                 </ul>
                 <ul class="link-info">
-                    <li><a href="#0"><i class="fa-brands fa-facebook-f"></i></a></li>
-                    <li><a href="#0"><i class="fa-brands fa-twitter"></i></a></li>
-                    <li><a href="#0"><i class="fa-brands fa-linkedin-in"></i></a></li>
-                    {{-- <li><a href="#0"><i class="fa-brands fa-pinterest-p"></i></a></li> --}}
+                    <li><a href="{{ setting('company_facebook') ?? '#' }}"><i class="fa-brands fa-facebook-f"></i></a></li>
+                    <li><a href="{{ setting('company_twitter') ?? '#' }}"><i class="fa-brands fa-twitter"></i></a></li>
+                    <li><a href="{{ setting('company_instagram') ?? '#' }}"><i class="fa-brands fa-instagram"></i></a></li>
                 </ul>
             </div>
         </div>

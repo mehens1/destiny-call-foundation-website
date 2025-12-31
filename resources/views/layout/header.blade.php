@@ -8,6 +8,7 @@
                 <div class="main-menu">
                     <nav>
                         <ul>
+                            
                             <li><a href="/">Home</a></li>
                             <li><a href="/about">About</a></li>
                             <li><a href="/blog">Blog</a></li>
@@ -83,7 +84,7 @@
                 <div class="btn-two d-none d-lg-inline-block">
                     <span class=" btn-circle">
                     </span>
-                    <a href="cause-single.html" class="btn-inner">
+                    <a href="#" class="btn-inner">
                         <span class="btn-text">
                             DONATE NOW
                         </span>
