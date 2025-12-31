@@ -222,7 +222,7 @@
                 <div class="row g-8">
                     <div class="col-xl-6 col-md-6 wow fadeInUp" data-wow-delay="00ms" data-wow-duration="1500ms">
                         <div class="service__item">
-                            <div class="service__icon"><img src="assets/images/icon/vision.png" width="150" alt="vision"></div>
+                            <div class="service__icon"><img src="{{asset('assets/images/icon/vision.png')}}" width="150" alt="vision"></div>
                             <div class="service__content">
                                 <h3 class="text-white">Vision</h3>
                                 <p class="text-white">To raise a rare breed of young entrepreneurs with a global culture of excellence, strong leadership values, and a passion for social impact.</p>
@@ -231,7 +231,7 @@
                     </div>
                     <div class="col-xl-6 col-md-6 wow fadeInUp" data-wow-delay="200ms" data-wow-duration="1500ms">
                         <div class="service__item active">
-                            <div class="service__icon"><img src="assets/images/icon/mission.png" width="150" alt="mission"></div>
+                            <div class="service__icon"><img src="{{asset('assets/images/icon/mission.png')}}" width="150" alt="mission"></div>
                             <div class="service__content">
                                 <h3 class="text-white">Mission</h3>
                                 <p class="text-white">To provide a dynamic platform for knowledge-sharing, strategic networking, and empowerment for leaders, entrepreneurs, and trendsetters in business and community development.</p>
