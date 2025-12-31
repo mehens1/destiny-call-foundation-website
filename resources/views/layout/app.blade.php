@@ -55,7 +55,7 @@
                 </h2>
                 <div class="breadcrumb-list wow fadeInUp" data-wow-delay="200ms" data-wow-duration="1500ms">
                     <a href="{{ url('/') }}">Home</a>
-                    <span><i class="fa-regular fa-angles-right mx-2"></i> @yield('title', 'Page')</span>
+                    <span><i class="fa-solid fa-angles-right"></i> @yield('title', 'Page')</span>
                 </div>
             </div>
         </section>
