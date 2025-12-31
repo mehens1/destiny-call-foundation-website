@@ -64,18 +64,18 @@
                 <div class="row g-5 mt-20">
                     <div class="col-lg-6 order-2 order-lg-1">
                         <div class="contact__map">
-                            <iframe
-                                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d122897.88733150701!2d-48.09324971503908!3d-15.721541570017282!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x935a3d18df9ae275%3A0x738470e469754a24!2sBras%C3%ADlia%20-%20Brasilia%2C%20Federal%20District%2C%20Brazil!5e0!3m2!1sen!2sbd!4v1703471804969!5m2!1sen!2sbd"
-                                width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
-                                referrerpolicy="no-referrer-when-downgrade"></iframe>
+                                <iframe width="600" height="450" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://maps.google.com/maps?width=100%25&amp;height=600&amp;hl=en&amp;q=9.263241,%2012.445869&amp;t=&amp;z=14&amp;ie=UTF8&amp;iwloc=B&amp;output=embed" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
                         </div>
+
+
+
                     </div>
                     <div class="col-lg-6 order-1  order-lg-2">
                         <div class="contact__form">
                             <div class="section-header mb-40">
                                 <h5 class="wow fadeInUp" data-wow-delay="00ms" data-wow-duration="1500ms">
-                                    <i class="fa-regular fa-angles-left pe-1"></i> Contact <i
-                                        class="fa-regular fa-angles-right ps-1"></i>
+                                    <i class="fa-solid fa-angles-left pe-1"></i> Contact <i
+                                        class="fa-solid fa-angles-right ps-1"></i>
                                 </h5>
                                 <h2 class="wow fadeInUp" data-wow-delay="200ms" data-wow-duration="1500ms">
                                     Get in Touch

@@ -13,10 +13,9 @@
             <li><i class="fa-solid primary-color fa-paper-plane"></i> <a href="#0">{{ setting('company_email') }}</a></li>
         </ul>
         <div class="social-icon mt-20">
-            <a href="#0"><i class="fa-brands fa-facebook-f"></i></a>
-            <a href="#0"><i class="fa-brands fa-twitter"></i></a>
-            <a href="#0"><i class="fa-brands fa-linkedin-in"></i></a>
-            <a href="#0"><i class="fa-brands fa-pinterest-p"></i></a>
+            <a href="{{setting('company_facebook')}}"><i class="fa-brands fa-facebook-f"></i></a>
+            <a href="{{setting('company_twitter')}}"><i class="fa-brands fa-twitter"></i></a>
+            <a href="{{setting('company_instagram')}}"><i class="fa-brands fa-instagram"></i></a>
         </div>
         <button id="closeButton" class="text-white"><i class="fa-solid fa-xmark"></i></button>
     </div>
