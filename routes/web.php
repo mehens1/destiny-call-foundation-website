@@ -23,3 +23,7 @@ Route::get('/blog/{id}', [BlogController::class, 'show'])->name('blog.show');
 Route::get('/donate', function () {
     return view('donate');
 });
+
+Route::get('/program', function () {
+    return view('program');
+});
