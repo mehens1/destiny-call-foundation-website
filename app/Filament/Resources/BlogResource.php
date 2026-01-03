@@ -9,6 +9,7 @@ use Filament\Forms\Form;
 use Filament\Resources\Resource;
 use Filament\Tables;
 use Filament\Tables\Table;
+use Livewire\Features\SupportFileUploads\TemporaryUploadedFile;
 
 class BlogResource extends Resource
 {
@@ -19,98 +20,98 @@ class BlogResource extends Resource
 
     public static function form(Form $form): Form
     {
-        return $form
-            ->schema([
-                Forms\Components\TextInput::make('title')->required(),
-                Forms\Components\Select::make('category_id')
-                    ->label('Category')
-                    ->relationship('category', 'name')
-                    ->required(),
+        return $form->schema([
+            Forms\Components\TextInput::make('title')->required(),
 
-                Forms\Components\Section::make('Featured Image')
-                    ->schema([
-                        Forms\Components\FileUpload::make('featured_image')
-                            ->label('Featured Image')
-                            ->image()
-                            ->imageEditor()
-                            ->maxSize(2048)
-                            ->visibility('public')
-                            ->imagePreviewHeight('250')
-                            ->afterStateUpdated(function ($state, callable $set) {
-                                try {
-                                    if (!$state) {
-                                        return;
-                                    }
+            Forms\Components\Select::make('category_id')
+                ->label('Category')
+                ->relationship('category', 'name')
+                ->required(),
 
-                                    $uploadedFile = $state;
+            Forms\Components\FileUpload::make('featured_image_upload')
+                ->label('Featured Image')
+                ->image()
+                ->acceptedFileTypes(['image/*'])
+                ->imageEditor()
+                ->multiple(false)
+                ->visibility('public')
+                ->imagePreviewHeight('250')
+                ->required()
+                ->dehydrated(false)
+                ->getUploadedFileNameForStorageUsing(
+                    fn(TemporaryUploadedFile $file): string => $file->getClientOriginalName()
+                )
+                ->afterStateUpdated(function ($state, callable $set) {
+                    try {
+                        if (!$state) return;
 
-                                    $absolutePath = $uploadedFile->getRealPath();
+                        $uploadedFile = $state instanceof TemporaryUploadedFile
+                            ? $state
+                            : (is_array($state) ? $state[0] : $state);
 
-                                    if (!file_exists($absolutePath)) {
-                                        logger()->error("Temp file missing: {$absolutePath}");
-                                        return;
-                                    }
+                        $absolutePath = $uploadedFile->getRealPath();
 
-                                    $cloudinaryUrl = \App\Services\CloudinaryService::upload($uploadedFile, 'blog');
+                        if (!file_exists($absolutePath)) {
+                            logger()->error("Temp file missing: {$absolutePath}");
+                            return;
+                        }
 
-                                    $set('featured_image', [$cloudinaryUrl]);
+                        $cloudinaryUrl = \App\Services\CloudinaryService::upload(
+                            $absolutePath,
+                            'blog_images/featured_images'
+                        );
 
-                                    @unlink($absolutePath);
-                                } catch (\Throwable $e) {
-                                    logger()->error("Cloudinary upload error: " . $e->getMessage());
-                                }
-                            }),
-                    ]),
+                        $set('featured_image', $cloudinaryUrl);
+                    } catch (\Throwable $e) {
+                        logger()->error('Cloudinary upload error: ' . $e->getMessage());
+                    }
+                }),
 
-                Forms\Components\Section::make('Content')
-                    ->schema([
-                        Forms\Components\RichEditor::make('content')
-                            ->label('Blog Content')
-                            ->required()
-                            ->fileAttachmentsDisk('cloudinary')
-                            ->fileAttachmentsDirectory('blogs/attachments')
-                            ->fileAttachmentsVisibility('public')
-                            ->columnSpanFull(),
-                    ]),
+            Forms\Components\Hidden::make('featured_image')
+                ->dehydrated(true)
+                ->required(),
 
-                Forms\Components\Section::make('Publication Settings')
-                    ->schema([
-                        Forms\Components\Select::make('status')
-                            ->label('Status')
-                            ->options([
-                                'draft' => 'Draft',
-                                'published' => 'Published',
-                                'archived' => 'Archived',
-                            ])
-                            ->default('published')
-                            ->required(),
-                    ]),
+            Forms\Components\Section::make('Content')
+                ->schema([
+                    Forms\Components\RichEditor::make('content')
+                        ->label('Blog Content')
+                        ->required()
+                        ->fileAttachmentsDisk('cloudinary')
+                        ->fileAttachmentsDirectory('blogs/attachments')
+                        ->fileAttachmentsVisibility('public')
+                        ->columnSpanFull(),
+                ]),
 
-                Forms\Components\Section::make('SEO')
-                    ->schema([
-                        Forms\Components\TextInput::make('meta_title')
-                            ->label('Meta Title'),
-                        Forms\Components\Textarea::make('meta_description')
-                            ->label('Meta Description'),
-                    ]),
+            Forms\Components\Section::make('Publication Settings')
+                ->schema([
+                    Forms\Components\Select::make('status')
+                        ->label('Status')
+                        ->options([
+                            'draft' => 'Draft',
+                            'published' => 'Published',
+                            'archived' => 'Archived',
+                        ])
+                        ->default('published')
+                        ->required(),
+                ]),
 
-
-            ]);
+            Forms\Components\Section::make('SEO')
+                ->schema([
+                    Forms\Components\TextInput::make('meta_title')->label('Meta Title'),
+                    Forms\Components\Textarea::make('meta_description')->label('Meta Description'),
+                ]),
+        ]);
     }
 
-
-    public static function table(Table $table): Table
+    public static function table(Tables\Table $table): Tables\Table
     {
         return $table
             ->columns([
-                Tables\Columns\TextColumn::make('id')->searchable()->sortable(),
-                Tables\Columns\TextColumn::make('title')->searchable(),
-                // Tables\Columns\TextColumn::make('category_id')->label('Category'),
+                Tables\Columns\TextColumn::make('id')->sortable(),
+                Tables\Columns\ImageColumn::make('featured_image')->label('Featured Image'),
+                Tables\Columns\TextColumn::make('title'),
                 Tables\Columns\TextColumn::make('category.name')->label('Category'),
                 Tables\Columns\TextColumn::make('created_at')->dateTime()->sortable(),
-            ])
-            ->filters([
-                //
             ])
             ->actions([
                 Tables\Actions\EditAction::make(),

@@ -4,10 +4,11 @@ namespace App\Services;
 
 use CloudinaryLabs\CloudinaryLaravel\Facades\Cloudinary;
 use Illuminate\Http\UploadedFile;
+use Illuminate\Support\Str;
 
 class CloudinaryService
 {
-    private static string $baseFolder = 'bincike_international/website';
+    private static string $baseFolder = 'dcf/website';
 
     private static function buildFolder(?string $folder): string
     {
@@ -16,45 +17,19 @@ class CloudinaryService
             : self::$baseFolder;
     }
 
-    // public static function upload(UploadedFile|string $file, ?string $folder = null): string
-    // {
-    //     try {
-    //         $options = [
-    //             'folder' => self::buildFolder($folder)
-    //         ];
-
-    //         $path = is_string($file)
-    //             ? $file
-    //             : $file->getRealPath();
-
-    //         if (!$path || !file_exists($path)) {
-    //             throw new \Exception("Invalid file path: {$path}");
-    //         }
-
-    //         $result = Cloudinary::upload($path, $options);
-
-    //         return $result->getSecurePath();
-    //     } catch (\Exception $e) {
-    //         logger()->error('Cloudinary upload failed: ' . $e->getMessage());
-    //         throw $e;
-    //     }
-    // }
     public static function upload(UploadedFile|string $file, ?string $folder = null): string
     {
+
         try {
-            // If it's already a URL, just return it (no need to re-upload)
             if (is_string($file)) {
-                // Clean weird cases like "storage/.../https://..."
                 if (preg_match('/https?:\/\/.+$/', $file, $matches)) {
                     return $matches[0]; // return the URL part
                 }
 
-                // If it's a plain URL
                 if (Str::startsWith($file, ['http://', 'https://'])) {
                     return $file;
                 }
 
-                // Otherwise it's a local path string: leave it for file_exists check below
                 $path = $file;
             } else {
                 // UploadedFile instance
@@ -71,7 +46,10 @@ class CloudinaryService
 
             $result = Cloudinary::upload($path, $options);
 
-            return $result->getSecurePath();
+            $publicId = $result->getPublicId();
+            $ext      = $result->getExtension();
+
+            return $publicId . '.' . $ext;
         } catch (\Exception $e) {
             logger()->error('Cloudinary upload failed: ' . $e->getMessage());
             throw $e;

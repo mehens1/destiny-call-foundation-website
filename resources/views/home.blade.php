@@ -202,7 +202,6 @@
                                     </a>
                                 </div>
                                 <div class="about-info">
-                                    {{-- <img src="assets/images/about/founder.jpg" width="50" alt="Founder"> --}}
                                     <div class="con">
                                         <h5 class="fs-16">Ayuba Garba</h5>
                                         <span class="sm-font">Founder, Destiny Call Foundation</span>

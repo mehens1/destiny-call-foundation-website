@@ -73,6 +73,18 @@
                                     </div>
                                 </div>
                             </div> --}}
+
+                            <div class="btn-two">
+                                    <span class="btn-circle">
+                                    </span>
+                                    <a href="/about" class="btn-inner">
+                                        <span class="btn-text">
+                                            Download Brochure
+                                        </span>
+                                    </a>
+                                </div>
+                                
+
                         </div>
                     </div>
                 </div>
@@ -203,32 +215,34 @@
 
                 <div class="about__content wow fadeInUp" data-wow-delay="400ms" data-wow-duration="1500ms">
                     <p>
-                        Destiny Call Foundation was established with a deep conviction that true transformation
-                        begins when people are empowered with purpose, knowledge, and opportunity.
-                        Across our communities, there are countless young people and women with great potential,
-                        yet limited access to the resources and platforms needed to thrive.
+                        Dear Friends and Partners, <br>
+                        Destiny Call Foundation was born from a personal journey of purpose, resilience, and a deep conviction that every life carries the potential to transform communities. As someone who grew up witnessing the challenges faced by youth and women in undeserved areas, I — Ayuba Garba—felt a divine call to create a platform that would reignite dreams and empower changemakers.
+                        <br>Today, Destiny Call Foundation stands as a beacon of hope, equipping the next generation with tools for leadership, entrepreneurship, and impact. We've seen young people rise from uncertainty to confidence, women build businesses from scratch, and communities flourish through shared purpose.
                     </p>
+
+                    <br>
 
                     <p>
-                        This foundation exists to bridge that gap—to create safe, inclusive spaces where leaders
-                        are discovered, ideas are nurtured, and impact is intentionally built.
-                        Our focus is not only on economic empowerment, but also on character, leadership values,
-                        and a global mindset that prepares individuals to influence their communities positively.
+                        This mission is bigger than any one person — it thrives because of people like you. Your support, partnership, and belief in this vision fuel every step forward.
                     </p>
 
+                    <br>
+                    
                     <p>
-                        Destiny Call Foundation is driven by the belief that when people are given the right tools,
-                        guidance, and support, they do not only change their own lives—they transform families,
-                        communities, and future generations.
+                        Thank you for walking this journey with us. Together, we are raising leaders who build and transform.
                     </p>
-
-                    <div class="mt-30">
+                    
+                    <br>
+                    <p>With gratitude,</p>
+                    <div class="">
                         <h3 class="mb-0">AYUBA GARBA</h3>
                         <h6 class="mb-0">Founder &amp; Managing Director</h6>
                         <span class="sm-font">Destiny Call Foundation</span>
                     </div>
                 </div>
             </div>
+
+            
         </div>
     </div>
 </section>

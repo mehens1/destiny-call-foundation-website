@@ -8,7 +8,7 @@
                         <div class="blog__item blog-single__left-item shadow-none">
                             <div class="image">
                                 <img 
-                                    src="{{ $post->featured_image ? asset('storage/' . $post->featured_image) : asset('assets/images/blog/blog_placeholder.png') }}" 
+                                    src="{{ $post->featured_image_url ?? asset('assets/images/blog/blog_placeholder.png') }}" 
                                     alt="{{ $post->title }}"
                                 />
 
