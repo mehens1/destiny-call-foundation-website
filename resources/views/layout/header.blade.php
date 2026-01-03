@@ -84,7 +84,7 @@
                 <div class="btn-two d-none d-lg-inline-block">
                     <span class=" btn-circle">
                     </span>
-                    <a href="#" class="btn-inner">
+                    <a href="/donate" class="btn-inner">
                         <span class="btn-text">
                             DONATE NOW
                         </span>

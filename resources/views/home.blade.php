@@ -13,7 +13,7 @@
                                 <div class="btn-one mt-50" data-animation="fadeInUp" data-delay="1s">
                                     <span class="btn-circle">
                                     </span>
-                                    <a href="/" class="btn-inner">
+                                    <a href="/donate" class="btn-inner">
                                         <span class="btn-text">
                                             DONATE NOW
                                         </span>
@@ -31,7 +31,7 @@
                                 <div class="btn-one mt-50" data-animation="fadeInUp" data-delay="1s">
                                     <span class="btn-circle">
                                     </span>
-                                    <a href="/" class="btn-inner">
+                                    <a href="/donate" class="btn-inner">
                                         <span class="btn-text">
                                             DONATE NOW
                                         </span>
@@ -269,7 +269,7 @@
                                 <h2 class="text-white wow fadeInUp" data-wow-delay="200ms" data-wow-duration="1500ms">Building Sustainable Impact Through Strategic Partnerships</h2>
                                 <p class="text-white wow fadeInUp" data-wow-delay="400ms" data-wow-duration="1500ms">We collaborate with organizations, institutions, and individuals who share our commitment to human development, entrepreneurship, and community transformation.</p>
                             </div>
-                            <div class="d-flex align-items-center justify-content-between gap-4 flex-wrap">
+                            {{-- <div class="d-flex align-items-center justify-content-between gap-4 flex-wrap">
                                 <div class="info wow fadeInDown" data-wow-delay="00ms" data-wow-duration="1500ms">
                                     <h2 class="text-white"><span class="count text-white">50</span>%</h2>
                                     <p class="mt-10 text-white">kids Need Help</p>
@@ -282,7 +282,7 @@
                                     <h2 class="text-white">$<span class="count text-white">125</span>k</h2>
                                     <p class="mt-10 text-white">Raised Now</p>
                                 </div>
-                            </div>
+                            </div> --}}
                         </div>
                     </div>
                 </div>

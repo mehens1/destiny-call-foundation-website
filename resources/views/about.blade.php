@@ -77,7 +77,7 @@
                             <div class="btn-two">
                                     <span class="btn-circle">
                                     </span>
-                                    <a href="/about" class="btn-inner">
+                                    <a href="{{asset('assets/DCF_BROCHURE.pdf')}}" target="_blank" class="btn-inner">
                                         <span class="btn-text">
                                             Download Brochure
                                         </span>

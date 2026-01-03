@@ -108,7 +108,7 @@ class BlogResource extends Resource
         return $table
             ->columns([
                 Tables\Columns\TextColumn::make('id')->sortable(),
-                Tables\Columns\ImageColumn::make('featured_image')->label('Featured Image'),
+                Tables\Columns\ImageColumn::make('featured_image_url')->label('Featured Image'),
                 Tables\Columns\TextColumn::make('title'),
                 Tables\Columns\TextColumn::make('category.name')->label('Category'),
                 Tables\Columns\TextColumn::make('created_at')->dateTime()->sortable(),
