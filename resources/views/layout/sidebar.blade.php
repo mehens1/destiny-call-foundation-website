@@ -16,6 +16,7 @@
             <a href="{{setting('company_facebook')}}"><i class="fa-brands fa-facebook-f"></i></a>
             <a href="{{setting('company_twitter')}}"><i class="fa-brands fa-twitter"></i></a>
             <a href="{{setting('company_instagram')}}"><i class="fa-brands fa-instagram"></i></a>
+            <a href="{{setting('company_linkedin')}}"><i class="fa-brands fa-linkedin"></i></a>
         </div>
         <button id="closeButton" class="text-white"><i class="fa-solid fa-xmark"></i></button>
     </div>

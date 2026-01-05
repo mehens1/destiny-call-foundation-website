@@ -13,7 +13,10 @@
             Charity Call Foundation
         @endif
     </title>
-
+    
+    <meta name="description" content="{{ setting('meta_description', 'DDestiny Call Foundation is a nonprofit organization established to nurture leadership excellence, entrepreneurial thinking, and social responsibility among youth and women—particularly in underserved communities across Nigeria and beyond. We believe that sustainable development begins with empowered people. Through carefully designed programs, mentorship networks, and strategic partnerships, we help individuals unlock their potential and translate ideas into meaningful impact.') }}">
+    <meta name="keywords" content="{{ setting('meta_keywords', 'nonprofit, leadership development, entrepreneurial thinking, social responsibility, youth empowerment, women empowerment, underserved communities, Nigeria, sustainable development, mentorship, strategic partnerships') }}">
+    <meta name="author" content="Destiny Call Foundation">
 
     <link rel="shortcut icon" href="{{asset('assets/images/favicon.png')}}">
     <link rel="stylesheet" href="{{asset('assets/css/bootstrap.min.css')}}">
@@ -50,9 +53,9 @@
         <section class="banner__inner-page bg-image pt-160 pb-160"
             data-background="{{ asset('assets/images/banner/banner-inner-page.jpg') }}">
             <div class="container">
-                <h2 class="wow fadeInUp" data-wow-delay="00ms" data-wow-duration="1500ms">
+                <h1 class="wow fadeInUp text-white" data-wow-delay="00ms" data-wow-duration="1500ms">
                     @yield('title', 'Page Title')
-                </h2>
+                </h1>
                 <div class="breadcrumb-list wow fadeInUp" data-wow-delay="200ms" data-wow-duration="1500ms">
                     <a href="{{ url('/') }}">Home</a>
                     <span><i class="fa-solid fa-angles-right"></i> @yield('title', 'Page')</span>

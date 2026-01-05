@@ -156,13 +156,39 @@
                     </div>
                 </div>
             </div>
-        </div>
 
-        <!-- Optional Donation Note -->
+            {{-- <div class="col-12">
+                <div class="service__item" style="padding: 35px;">
+                    <div class="row align-items-center g-4">
+                        <div class="col-lg-8">
+                            <h3 class="text-white mb-10">
+                                <i class="fa-solid fa-credit-card me-2"></i> Donate Instantly via Flutterwave
+                            </h3>
+                            <p class="text-white mb-0">
+                                Prefer card payment, bank transfer, or USSD? Use our Flutterwave payment link to donate in seconds.
+                            </p>
+                        </div>
+                        <div class="col-lg-4 text-lg-end">
+                            <div class="btn-one">
+                                <span class="btn-circle"></span>
+                                <a href="https://flutterwave.com/pay/YOUR-PAYMENT-LINK" target="_blank" class="btn-inner">
+                                    <span class="btn-text">Pay with Flutterwave</span>
+                                </a>
+                            </div>
+                            <p class="text-white mt-15 sm-font mb-0">
+                                Secure checkout • Receipt available
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div> --}}
+            
+        </div>
+        
         <div class="text-center mt-60">
             <p class="mb-0">
                 <strong>After donating:</strong> Kindly send proof of payment to
-                <a href="mailto:info@destinycallfoundation.org">info@destinycallfoundation.org</a>
+                <a href="mailto:{{setting('company_email' ?? '#')}}">{{setting('company_email' ?? '#')}}</a>
                 so we can acknowledge your donation properly.
             </p>
         </div>
@@ -230,6 +256,8 @@
         });
     }
 </script>
+
+
 
 @endsection
 {{-- @extends('layout.app')

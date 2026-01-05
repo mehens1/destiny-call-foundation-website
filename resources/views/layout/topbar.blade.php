@@ -35,6 +35,7 @@
                     <li><a href="{{ setting('company_facebook') ?? '#' }}"><i class="fa-brands fa-facebook-f"></i></a></li>
                     <li><a href="{{ setting('company_twitter') ?? '#' }}"><i class="fa-brands fa-twitter"></i></a></li>
                     <li><a href="{{ setting('company_instagram') ?? '#' }}"><i class="fa-brands fa-instagram"></i></a></li>
+                    <li><a href="{{ setting('company_linkedin') ?? '#' }}"><i class="fa-brands fa-linkedin"></i></a></li>
                 </ul>
             </div>
         </div>

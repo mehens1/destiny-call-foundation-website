@@ -26,8 +26,8 @@
                         <div class="slide-bg" data-background="assets/images/banner/banner-image2.jpg"></div>
                         <div class="container">
                             <div class="banner-two__content">
-                                <h4 data-animation="fadeInUp" data-delay=".3s">Raising a Rare Breed of Purpose-Driven Leaders</h4>
-                                <h1 data-animation="fadeInUp" data-delay=".5s">We believe Africa’s future depends on empowered leaders with strong values, global competence, and a passion for social impact. At Destiny Call Foundation, leadership is built with intention.</h1>
+                                <h4 data-animation="fadeInUp" data-delay=".3s">We believe Africa’s future depends on empowered leaders with strong values, global competence, and a passion for social impact. At Destiny Call Foundation, leadership is built with intention.</h4>
+                                <h1 data-animation="fadeInUp" data-delay=".5s">Raising a Rare Breed of Purpose-Driven Leaders</h1>
                                 <div class="btn-one mt-50" data-animation="fadeInUp" data-delay="1s">
                                     <span class="btn-circle">
                                     </span>
@@ -56,6 +56,10 @@
                 </li>
                 <li>
                     <a href="{{setting('company_instagram') ?? '#'}}"><i class="fa-brands fa-instagram"></i></a>
+                </li>
+
+                <li>
+                    <a href="{{setting('company_linkedin') ?? '#'}}"><i class="fa-brands fa-linkedin"></i></a>
                 </li>
             </ul>
             <div class="banner-two__shape wow slideInLeft" data-wow-delay="600ms" data-wow-duration="1500ms">
