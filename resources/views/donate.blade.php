@@ -157,7 +157,7 @@
                 </div>
             </div>
 
-            {{-- <div class="col-12">
+            <div class="col-12">
                 <div class="service__item" style="padding: 35px;">
                     <div class="row align-items-center g-4">
                         <div class="col-lg-8">
@@ -171,7 +171,7 @@
                         <div class="col-lg-4 text-lg-end">
                             <div class="btn-one">
                                 <span class="btn-circle"></span>
-                                <a href="https://flutterwave.com/pay/YOUR-PAYMENT-LINK" target="_blank" class="btn-inner">
+                                <a href="https://flutterwave.com/donate/nori8kzfis3w" target="_blank" class="btn-inner">
                                     <span class="btn-text">Pay with Flutterwave</span>
                                 </a>
                             </div>
@@ -181,7 +181,7 @@
                         </div>
                     </div>
                 </div>
-            </div> --}}
+            </div>
             
         </div>
         
